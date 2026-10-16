@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rcp2motec"
+version = "0.1.0"
+description = "Convert RaceCapture CSV logs to MoTeC i2 LD files"
+requires-python = ">=3.10"
+
+[project.scripts]
+rcp2motec = "rcp2motec.cli:main"
+
+[tool.setuptools]
+packages = ["rcp2motec"]
+
+[tool.setuptools.package-data]
+rcp2motec = ["header.bin"]
